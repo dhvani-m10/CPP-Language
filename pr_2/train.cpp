@@ -47,7 +47,7 @@ public:
     void SearchTrain()
     {
         int SearchNo;
-        cout << "Enter Train Number to search: ";
+        cout << "Enter Train Number to search: "<<endl;
         cin >> SearchNo;
         if (SearchNo == train_no)
         {
