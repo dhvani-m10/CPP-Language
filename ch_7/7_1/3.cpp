@@ -4,43 +4,27 @@ using namespace std;
 
 int main()
 {
+    char pass[40];
 
-    char pass[20];
-    int count = 0;
-
-    cout << "Enter Password : ";
+    cout << "Enter a string: ";
     cin >> pass;
-
-    cout << "Start...." << endl;
 
     try
     {
-        if (count == 0)
+        for (int i = 0; pass[i] != '\0'; i++)
         {
-            for (int i = 0; pass[i] != NULL; i++)
+            if ((pass[i] >= 'a' && pass[i] <= 'z'))
             {
-                if (pass[i] >= 'A' && pass[i] <= 'Z')
-                {
-                   throw 1;
-                }
+                throw '1';
             }
-             count++;
         }
-        else
-        {
-            cout << "Your Password is validate!! " << endl;
-        }
-    }
-    catch (int n)
-    {
-        cout << "Your password is not validated!!" << endl;
-    }
-    catch (...)
-    {
-        cout << "General Exception!";
-    }
 
-    cout << "End...." << endl;
+        cout << "Password is Validate." << endl;
+    }
+    catch (char c)
+    {
+        cout << "Password is not Validate" << endl;
+    }
 
     return 0;
 }
